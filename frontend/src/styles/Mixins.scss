@@ -1,0 +1,76 @@
+@import "./Variables.scss";
+
+/* Header styling */
+@mixin header {
+  width: $width;
+  background-color: $header-bg;
+}
+
+/* Title styling */
+@mixin title {
+  color: $title;
+  font-size: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Paragraph styling */
+@mixin paragraph {
+    line-height: $line-height;
+  }
+
+/* Button styling */
+@mixin button {
+  background-color: $button-bg;
+  margin-top: 0.5rem;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: $radius;
+  text-align: center;
+  display: inline-block;
+  font-size: $normal-font-size;
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-hover;
+    color: $hover-text;
+  }
+}
+
+/* Icon styling */
+
+@mixin icon {
+  font-size: 2rem;
+  color: $border;
+  font-weight: $bold;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    color: $hover-text;
+  }
+}
+
+/* Form input styling */
+@mixin input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    font-size: $small-font-size;
+    border: 1px solid $title;
+    border-radius: 0.2rem;
+    outline: none;
+  
+    &:hover {
+      outline: 1px solid $title;
+    }
+  }
+
+/* component container styling */
+@mixin cart {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-top: 10%;
+}

@@ -1,0 +1,24 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.footer {
+    display: 100%;
+    background-color: $footer-bg;
+    margin-top: 25%;
+
+    .horizontal-line{
+        color: $bold;
+        font-weight: $semi-bold;
+    }
+
+    .copyright-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .copyright {
+            padding: 1rem;
+            color: white;
+        }
+    }
+}

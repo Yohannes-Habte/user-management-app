@@ -1,0 +1,23 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.profile-navbar {
+  .menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    background-color: $section-bg;
+    border-radius: $radius;
+
+    .item-list {
+      .link {
+        font-size: $normal-font-size;
+        &:hover {
+            color: red;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../../styles/Variables.scss";
+@import "../../../styles/Mixins.scss";
+
+.register-page {
+    width: 50%;
+    margin: auto;
+    border-radius: $radius;
+    background-color: $section-bg;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+      2px -1px 12px -11px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 2px -1px 12px -11px rgba(0, 0, 0, 0);
+  
+    .register-container {
+      @include cart;
+  
+      .icon-container {
+        text-align: center;
+        .login-icon {
+          @include icon;
+        }
+      }
+  
+      .register-title {
+        @include title;
+      }
+  
+      .register-form {
+        .input-container {
+          .input {
+            @include input;
+          }
+        }
+  
+        .login-form-btn {
+          @include button;
+        }
+
+        .password-checkbox {
+          background-color: white;
+          border: 1px solid $title;
+          padding: 1rem;
+          border-radius: $radius;
+        }
+      }
+  
+      .register-span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+  
+        .register-login {
+          display: flex;
+          color: blue;
+          font-size: $normal-font-size;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+  }

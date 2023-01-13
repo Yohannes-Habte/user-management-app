@@ -1,0 +1,27 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.change-role {
+    .change-role-form {
+        .change-role-select {
+            padding: 0.5rem;
+            font-size: $normal-font-size;
+            border: none;
+            background-color: $main-bg;
+            border-radius: $radius 0 0 $radius;
+        }
+
+        .change-role-btn {
+            position: relative;
+            .change-role-icon{
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                transform: translate(-1%, -65%);
+                color: blue;
+                font-size: 2.8rem;
+                cursor: pointer;
+            }
+        }
+    }
+}

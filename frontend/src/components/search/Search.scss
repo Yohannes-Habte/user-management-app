@@ -1,0 +1,27 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.search-container {
+    display: flex;
+    position: relative;
+
+    .search-icon{
+        position: absolute;
+        top: 20%;
+        left: 1rem;
+        font-size: 2rem;
+        color: #d2cbcb;
+
+    }
+    .search-input{
+       padding: 1rem;
+       border-radius: $radius;
+       width: 100%;
+       cursor: pointer;
+
+       &::placeholder {
+        padding-left: 2rem;
+        font-size: $normal-font-size;
+      }
+    }
+}

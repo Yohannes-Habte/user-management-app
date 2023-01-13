@@ -1,0 +1,41 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.user-summary {
+    .user-title {
+        @include title;
+    }
+
+    .infor-summary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .cart1 {
+            background-color: #d9f2b4;
+            padding: 1rem 1.5rem;
+            border-radius: $radius;
+        }
+
+        .cart2 {
+            background-color: #a9e5f9;
+            padding: 1rem 1.5rem;
+            border-radius: $radius;
+        }
+
+        .cart3 {
+            background-color: #f9cef7;
+            padding: 1rem 1.5rem;
+            border-radius: $radius;
+            
+        }
+
+        .cart4 {
+            background-color: #f68585;
+            padding: 1rem 1.5rem;
+            border-radius: $radius;
+            
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import "../../../styles/Variables.scss";
+@import "../../../styles/Mixins.scss";
+
+.login-page {
+  width: 50%;
+  margin: auto;
+  border-radius: $radius;
+  background-color: $section-bg;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    2px -1px 12px -11px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 2px -1px 12px -11px rgba(0, 0, 0, 0);
+
+  .login-container {
+    @include cart;
+
+    .icon-container {
+      text-align: center;
+      .login-icon {
+        @include icon;
+      }
+    }
+
+    .login-title {
+      @include title;
+    }
+
+    .google-btn-container {
+      text-align: center;
+      .google-btn {
+        @include button;
+      }
+    }
+
+    .login-or {
+      @include paragraph;
+      text-align: center;
+    }
+
+    .login-form {
+      .input-container {
+        .input {
+          @include input;
+        }
+      }
+
+      .login-form-btn {
+        @include button;
+      }
+    }
+
+    .forgot-password {
+      padding: 1rem 0;
+      .link {
+        font-size: $normal-font-size;
+        line-height: $line-height;
+        color: blue;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+
+    .login-span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .login-register {
+        display: flex;
+        color: blue;
+        font-size: $normal-font-size;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}

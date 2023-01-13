@@ -1,0 +1,31 @@
+@import "../../../styles/Variables.scss";
+@import "../../../styles/Mixins.scss";
+
+.verify-page {
+  width: $width;
+  max-width: $max-width;
+  margin: auto;
+
+  .verify-container {
+    width: $width;
+    max-width: $max-width;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .verify-title {
+        @include title;
+    }
+
+    .verify-paragraph {
+        font-size: $normal-font-size;
+    }
+
+    .verify-btn {
+        @include button;
+    }
+  }
+}

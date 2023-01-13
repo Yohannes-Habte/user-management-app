@@ -1,0 +1,51 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.header {
+  @include header;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .icon {
+        @include icon;
+      }
+    }
+
+    .navbar-items {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .icon {
+          @include icon;
+        }
+
+        .btn {
+          @include button;
+
+          .login {
+            color: white;
+            transition: $transition;
+            cursor: pointer;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

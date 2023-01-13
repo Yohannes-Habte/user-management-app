@@ -1,0 +1,62 @@
+@import "../../../styles/Variables.scss";
+@import "../../../styles/Mixins.scss";
+
+.reset-password-page {
+    width: 50%;
+    margin: auto;
+    border-radius: $radius;
+    background-color: $section-bg;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+      2px -1px 12px -11px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 2px -1px 12px -11px rgba(0, 0, 0, 0);
+  
+    .reset-password-container {
+      @include cart;
+  
+      .icon-container {
+        text-align: center;
+        .reset-password-icon {
+          @include icon;
+        }
+      }
+  
+      .reset-password-title {
+        @include title;
+      }
+  
+      .reset-password-form {
+        .input-container {
+          .input {
+            @include input;
+          }
+        }
+  
+        .reset-password-form-btn {
+          @include button;
+        }
+  
+        .reset-password-home-login {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 1rem;
+  
+          .reset-password-home {
+            color: blue;
+            font-size: $normal-font-size;
+            &:hover {
+              color: red;
+            }
+          }
+  
+          .reset-password-login {
+            color: blue;
+            font-size: $normal-font-size;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
