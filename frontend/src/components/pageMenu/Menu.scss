@@ -2,20 +2,27 @@
 @import "../../styles/Mixins.scss";
 
 .profile-navbar {
+  -webkit-box-shadow: 0px 1px 3px -7px #000000,
+    1px -1px 3px -11px rgba(0, 0, 0, 0);
+  box-shadow: 0px -1px 13px -7px #000000, 2px -1px 12px -11px #00000000;
+  background-color: #f8f8ff;
+  border-radius: $radius;
+
   .menu-items {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 0.5rem;
-    background-color: $section-bg;
-    border-radius: $radius;
 
     .item-list {
+      padding: 1rem 1.5rem;
+      border-radius: $radius;
+      
       .link {
         font-size: $normal-font-size;
         &:hover {
-            color: red;
+          color: red;
         }
       }
     }

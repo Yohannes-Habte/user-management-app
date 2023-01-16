@@ -16,12 +16,14 @@
 
     .profile-info {
       border: 1px solid $border;
+      border-radius: $radius;
       padding: 1rem;
 
       .profile-image-container {
         text-align: center;
         .image {
           border-radius: $radius;
+          height: 10rem;
         }
       }
 
@@ -29,19 +31,16 @@
         .label-input-ontainer {
           & label {
             display: block;
-            padding: 0.5rem 0;
           }
 
           & input {
+            @include input;
             display: block;
-            padding: 0.5rem;
-            width: 100%;
           }
 
           & textarea {
             display: block;
-            padding: 0.5rem;
-            width: 100%;
+            @include input;
           }
         }
 

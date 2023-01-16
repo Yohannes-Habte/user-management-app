@@ -5,10 +5,9 @@
   width: 50%;
   margin: auto;
   border-radius: $radius;
-  background-color: $section-bg;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000,
-    2px -1px 12px -11px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 2px -1px 12px -11px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 1px 3px -7px #000000,
+    1px -1px 3px -11px rgba(0, 0, 0, 0);
+  box-shadow: 0px -1px 13px -7px #000000, 2px -1px 12px -11px #00000000;
 
   .login-container {
     @include cart;

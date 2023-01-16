@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import ProfileImage from "../../assets/Yohannes.jpg";
 import Menu from "../../components/pageMenu/Menu";
+import PasswordInput from "../../components/passwordInput/PasswordInput";
 import "./Profile.scss";
 
 // The initial state object
 const initialState = {
   fullName: "",
   email: "",
+  password: "",
   phone: "",
   bio: "",
   photo: "",
@@ -15,8 +17,12 @@ const initialState = {
 };
 const Profile = () => {
   const [profile, setProfile] = useState(initialState);
+  const { fullName, email, password, phone, bio, photo } = profile;
   // Function that handles image profile change
-  const handleImageChange = () => {};
+  const handleImageChange = (e) => {
+    const { name, value } = e.target;
+    setProfile({ ...profile, [name]: value });
+  };
 
   return (
     <main className="profile-page">
@@ -32,12 +38,13 @@ const Profile = () => {
 
           <form action="" className="profile-form">
             <div className="label-input-ontainer">
-              <label htmlFor="image"> Change Photo: </label>
+              <label htmlFor="photo"> Change Photo: </label>
               <input
                 type="file"
                 accept="image/*" /* This is used to accept all types of images*/
-                name="image"
-                id="image"
+                name="photo"
+                id="photo"
+                value={photo}
                 onChange={handleImageChange}
               />
             </div>
@@ -48,7 +55,7 @@ const Profile = () => {
                 type="text"
                 name="fullName"
                 id="fullName"
-                value={profile.fullName}
+                value={fullName}
                 onChange={handleImageChange}
               />
             </div>
@@ -59,19 +66,29 @@ const Profile = () => {
                 type="email"
                 name="email"
                 id="email"
-                value={profile.email}
+                value={email}
                 onChange={handleImageChange}
-                disabled /* This does not allow you to edit the email */
+                //disabled /* This does not allow you to edit the email */
               />
             </div>
 
             <div className="label-input-ontainer">
-              <label htmlFor="phone"> Email: </label>
+              <label htmlFor="password"> Password: </label>
+              <PasswordInput
+                name="password"
+                id="password"
+                value={password}
+                onChange={handleImageChange}
+              />
+            </div>
+
+            <div className="label-input-ontainer">
+              <label htmlFor="phone"> Phone: </label>
               <input
                 type="text"
                 name="phone"
                 id="phone"
-                value={profile.phone}
+                value={phone}
                 onChange={handleImageChange}
               />
             </div>
@@ -83,7 +100,7 @@ const Profile = () => {
                 id="bio"
                 cols="30"
                 rows="10"
-                value={profile.bio}
+                value={bio}
                 onChange={handleImageChange}
               ></textarea>
             </div>
